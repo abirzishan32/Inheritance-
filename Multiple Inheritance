@@ -7,18 +7,12 @@ public:
     A(int b) {
         cout<<"A"<<endl;
     }
-    void work (){
-        cout<<"String in A"<<endl;
-    }
 };
 
 class B{
 public:
     B(int a) {
         cout<<"B"<<endl;
-    }
-    void work(){
-        cout<<"String in B"<<endl;
     }
 };
 
@@ -30,7 +24,6 @@ public:
         cout << "C"<<endl;
     }
 };
-
 
 
 int main(){
