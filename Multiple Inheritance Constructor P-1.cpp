@@ -28,7 +28,7 @@ class C : public A, public B {
     int c;
 
   public:
-    C(int z) {
+    C(int z) { //While compiling, it will be compiled like : C(int z) : A(), B() 
       c = z;
       cout << "C constructor called" << endl;
     }
