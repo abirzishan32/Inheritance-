@@ -65,7 +65,8 @@ int main(){
     //Way 3:
     static_cast <A> (obj).printFunc();
     static_cast <B> (obj).printFunc();
-    //In this case we are typecasting the printFunc() function for a particular class A or B
+    //In this case we are typecasting the printFunc() function for a particular class A or B. By this we can access the function of same name
+    //but of different classes (A or B)
 
 
     return 0;
