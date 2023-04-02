@@ -28,6 +28,7 @@ class Matrix {
     private:
     int** data;
     int row, col;
+
     public:
     Matrix(int r, int c){
         row = r;
@@ -41,6 +42,11 @@ class Matrix {
         return data[row];
     }
 };
+
+/* The line data = new int*[row] dynamically allocates an array of row pointers to integers. 
+Each of these pointers will point to an array of col integers that represents a row of the matrix.
+The for loop that follows initializes each row of the matrix by allocating an array of col integers for each pointer.
+ This ensures that each row has enough space to store col integers.*/
 
 
 int main(int argc, const char** argv) {
