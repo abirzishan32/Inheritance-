@@ -39,7 +39,9 @@ class A {
         }
         return false;
     }
-
+    
+    
+    //With using friend function
     friend bool operator > (A obj1, A obj2){
         if(obj1.num > obj2.num){
             return true;
@@ -47,12 +49,6 @@ class A {
         return false;
     }
 
-
-
-
-    //With using friend function
-    
-    
 };
 
 
