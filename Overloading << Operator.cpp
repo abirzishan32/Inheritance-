@@ -40,11 +40,10 @@ public:
         return age; 
     }
 
-    friend ostream& operator<<(ostream& os, Person& person) {
-    os << "Name: " << person.getName() << ", Age: " << person.getAge();
+    friend ostream& operator<<(ostream& os, Person& obj) {
+    os << "Name: " << obj.getName() << ", Age: " << obj.getAge();
     return os;
-    }
-    //We are using the overloading operator as a member function, that's why we need to make it friend function.
+}
 };
 
 
