@@ -45,6 +45,13 @@ class Rectangle {
         return temp;
     }
 
+    Rectangle friend operator + (Rectangle obj, int value){
+        Rectangle temp;
+        temp.length = value + obj.length;
+        temp.width = obj.width;
+        return temp;
+    }
+
 
 };
 
@@ -56,5 +63,7 @@ int main(int argc, const char** argv) {
     Rectangle r2(5, 6);
     Rectangle r3 = r1 + r2;
     r3.display();
+    Rectangle r4 = r1 + 3;
+    r4.display();
     return 0;
 }
