@@ -33,22 +33,25 @@ class A {
 
 
     //Without using friend function
-    bool operartor > (A obj1){
-        if(num > obj2.num){
+    bool operator > (A obj){
+        if(num > obj.num){
             return true;
         }
         return false;
     }
 
-
-
-    //With using friend function
-    bool friend operator > (A obj1, A obj2){
+    friend bool operator > (A obj1, A obj2){
         if(obj1.num > obj2.num){
             return true;
         }
         return false;
     }
+
+
+
+
+    //With using friend function
+    
     
 };
 
@@ -56,10 +59,11 @@ class A {
 int main(int argc, const char** argv) {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    A obj1(16);
+    A obj1(1);
     A obj2(13);
     if(obj1 > obj2){
         cout<<"Object 1 is greater"<<endl;
     }
+    else cout<<"Object 2 is greater" << endl;
     return 0;
 }
