@@ -24,32 +24,32 @@ typedef vector<vl> vvl;
 #define yout cout<<"YES"<<endl
 #define nout cout<<"NO"<<endl;
 
-class Person {
-private:
-    string name;
-    int age;
-    
-public:
-    Person(string str, int n) : name(str), age(n) {}
-    string getName()  
-    {
-        return name;
-    }
-    int getAge()
-    { 
-        return age; 
+class A{
+    private:
+    int x;
+    int y;
+    public:
+    A(int a=0, int b=0) {
+        x= a;
+        y= b;
     }
 
-    friend ostream& operator<<(ostream& os, Person& obj) {
-    os << "Name: " << obj.getName() << ", Age: " << obj.getAge();
-    return os;
-}
+    friend istream& operator >> (istream& in, A &obj){
+        in >> obj.x >> obj.y;
+        return in;
+    }
+
+    friend ostream& operator << (ostream& out, A &obj){
+        out << obj.x <<' '<<obj.y<<endl;
+        return out;
+    }
 };
 
 
-
-int main() {
-    Person person("John", 30);
-    cout << person << endl;
+int main()
+{
+    A obj;
+    cin>>obj;
+    cout<<obj<<endl;
     return 0;
 }
