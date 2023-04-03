@@ -39,12 +39,15 @@ public:
     { 
         return age; 
     }
-};
 
-ostream& operator<<(ostream& os, Person& person) {
+    friend ostream& operator<<(ostream& os, Person& person) {
     os << "Name: " << person.getName() << ", Age: " << person.getAge();
     return os;
-}
+    }
+    //We are using the overloading operator as a member function, that's why we need to make it friend function.
+};
+
+
 
 int main() {
     Person person("John", 30);
