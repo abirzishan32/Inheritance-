@@ -25,7 +25,7 @@ typedef vector<vl> vvl;
 #define nout cout<<"NO"<<endl
 
 const int SIZE = 10;
-template <typename type>
+template <typename type = int> //Default argument of the template class is 'int'
 
 class Stack {
 private:
@@ -58,7 +58,7 @@ public:
 
 
 int main(){
-    Stack<int> st1;
+    Stack st1; //As default argument of template class is int, we dont need to specificly write 'int' here
     st1.push(10);
     st1.push(12);
     st1.push(16);
@@ -85,4 +85,7 @@ int main(){
     st3.push(1.2);
     st3.push(4.6);
     for(int i=0; i<5; i++) cout << st3.pop() <<' ';
+    cout<<endl;
+
+    return 0;
 }
