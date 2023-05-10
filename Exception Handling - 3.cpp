@@ -23,7 +23,7 @@ int main() {
         }
         catch(int n){       //Inner Catch
             cout<<"Inner Catch "<<n<<endl;
-            throw;      //Re-Throwing Exceptions
+            throw;      //Re-Throwing Exceptions. In this case we throw it without any arguments
         }       
     }
     catch(int n){       //Outer Catch
